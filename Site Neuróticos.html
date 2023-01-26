@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuróticos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto',sans-serif;
+        }
+        body{
+            background: linear-gradient(180deg, #d0a7ec, #69b9e7);
+        }
+        header{
+            background-color: #8461af54;
+            
+        }
+        .logo{
+            margin: 0 auto;
+            padding: 0 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+        }
+        .logo p{
+            font-size: 30px;
+            font-weight: bold;
+            color: #313064;
+        }
+        .logo img{
+            width: 60px;  
+            height: 70px;
+        }
+        .container{
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 15%;
+        }
+        main{
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        main p{
+            color: rgb(62, 1, 75)
+        }
+        .text-bx{
+            margin-top: 50px;
+            width: 50%;
+        }
+        .text-bx h1{
+            font-size: 3vw;
+            text-transform: uppercase;
+            color: #8461af
+        }
+        .text-bx p{
+            font-size: 1.5vw;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+        .img-bx{
+            width: 60%;
+        }
+        .img-bx img{
+            width: 110%;
+        }
+        .maquete{
+            padding: 0 5%;
+            justify-content: center;
+            align-items: center;
+        }
+        .img2345{
+            display: flex;
+            margin-top: 5%;
+        }
+        .img2345 img{
+            margin-left: 20px;
+            margin-right: 20px;   
+            width: 250px;
+            max-width: 70%;
+            border-radius: 50%;
+            border: 5px solid #8461af;
+        }
+        .img2345 p{
+            margin-top: 5%;
+            margin-left: 30%;
+            margin-right: 30%;
+            font-weight: bold;
+            font-size: 1.4vw;
+        }
+        .img2345 a{
+            text-decoration: none;
+            color:#313064
+        }
+        .img1 img{
+            width: 90%;
+            border-radius: 15%;
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border: 5px solid #8461af;
+        }
+
+        figure{
+            border: 45px solid #8461af;
+            background-color: #8461af;
+            border-radius: 10%;
+            width: 90%; 
+            min-width: 17.5em; 
+            margin:0 auto;
+            margin-top: 20%;
+        }
+        figcaption{
+            font: 120% sans-serif; 
+            text-align: center;
+            font-size: 2vw;
+            color:#313064
+        }
+        .bx-videos{
+           position: relative;
+           padding-bottom: 56.25%; 
+           padding-top: 25px;
+           height: 0;
+           margin:0 auto;
+           margin-top: 20px;
+           border: 10px solid #313064;
+        }
+        .bx-videos iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<header>
+        <div class="logo">
+            <p>Neuróticos</p>
+            <img src="./logodoif.png">
+        </div>
+</header>
+
+<body>
+    <div class="container">
+        <main>
+            <div class="text-bx">
+                <h1>Neurônios e Sinapse </h1>
+                <p>Nesse site, abordamos cada parte da principal célula do sistema nervoso, o <b>neurônio</b>, que é formado por: <b>dendritos</b>, <b>corpo celular</b>, <b>axônio</b> e também uma região de comunicação conhecida como <b>sinapse</b>. Logo abaixo você encontrará a nossa <b>bio-maquete</b> e um menu para explorar nossos vídeos informativos! Ao passar por todos os nosso vídeos, você poderá responder a um questionário referente ao conteúdo exposto.</p>
+            </div>
+            <div class="img-bx">
+                <img src="./neuronio2.png">
+            </div>
+        </main>
+    </div>
+
+    <div class="maquete">
+        <div class="img1">
+            <img src="./maquete.jpg">
+        </div>
+        <div class="img2345">
+            <a href="#corpocelular">
+                <img src="./corpocelular.jpg">
+                <p>Corpo Celular</p>
+            </a>
+            <a href="#axonio">
+                <img src="./axônio.jpg">
+                <p>Axônio</p>
+            </a>
+            <a href="#dendritos">
+                <img src="./dendritos.jpg">
+                <p>Dendritos</p>
+            </a>
+            <a href="#sinapse">
+                <img src="./sinapse.jpg">
+                <p>Sinapse</p>
+            </a>
+        </div>
+    </div>
+
+    <figure>
+        <figcaption>
+            <h1 id="sinapse">Sinapse</h1>
+        </figcaption>
+        <div class="bx-videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0M7ST0GdWsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    </figure>
+</body>
+</html>
