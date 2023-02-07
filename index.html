@@ -97,8 +97,9 @@
         }
         .menu a{
             text-decoration: none;
-            color:#313064
+            color:#313064;
         }
+
         .img1 img{
             width: 90%;
             border-radius: 15%;
@@ -145,7 +146,7 @@
             height: 100%;
         }
         .voltaraotopo{
-            background-color: #8461af;
+            background-color: #4e258054;
             padding: 0 43%;
             margin-top: 100px;
         }
@@ -173,7 +174,83 @@
             font-weight: 400;
             margin-top: 20px;
         }
+
+        .questoes{
+            border: 45px solid #313064;
+            background-color: #313064;
+            border-radius: 10%;
+            width: 90%; 
+            min-width: 17.5em; 
+            margin:0 auto;
+            margin-top: 20%;
+        }
+        .questoes p{
+            color: #8461af;
+            font-size: 2vw;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+        .pergunta{
+            font: 120% sans-serif; 
+            text-align: center;
+            font-size: 2vw;
+            color:#8461af;
+        }
+        .botaoir{
+            font: 120% sans-serif; 
+            text-align: center;
+            font-size: 2vw;
+            color:#8461af;
+            margin-top: 5%;
+        }
+        .botaoir a{
+            text-decoration: none;
+            color:#313064;
+        }
+
     </style>
+    <script>
+        function resposta(){
+            if (document.getElementById('correto1').checked || document.getElementById('correto2').checked || document.getElementById('correto3').checked || document.getElementById('correto4').checked){
+                window.alert("Parabéns! Você acertou :D");
+
+                if(document.getElementById('correto1').checked){
+                    document.getElementById('c1').style.backgroundColor = 'green';
+                    
+                }
+                else if(document.getElementById('correto2').checked){
+                    document.getElementById('c2').style.backgroundColor = 'green';
+                    
+                }
+                else if(document.getElementById('correto3').checked){
+                    document.getElementById('c3').style.backgroundColor = 'green';
+                    
+                }
+                else if(document.getElementById('correto4').checked){
+                    document.getElementById('c4').style.backgroundColor = 'green';
+                    
+                }
+
+                document.getElementById('correto1').checked = false;
+                document.getElementById('correto2').checked = false;
+                document.getElementById('correto3').checked = false;
+                document.getElementById('correto4').checked = false;
+                
+            }
+            else{
+                window.alert("Ah, não! Você errou :(")
+                document.getElementById('errado1').checked = false;
+                document.getElementById('errado2').checked = false;
+                document.getElementById('errado3').checked = false;
+                document.getElementById('errado4').checked = false;
+                document.getElementById('errado5').checked = false;
+                document.getElementById('errado6').checked = false;
+                document.getElementById('errado7').checked = false;
+                document.getElementById('errado8').checked = false;
+            }
+            
+        }
+    </script>
 </head>
 
 <header>
@@ -188,7 +265,7 @@
         <main>
             <div class="text-bx">
                 <h1>Neurônios e Sinapse </h1>
-                <p>Nesse site, abordamos cada parte da principal célula do sistema nervoso, o <b>neurônio</b>, que é formado por: <b>dendritos</b>, <b>corpo celular</b>, <b>axônio</b> e também uma região de comunicação conhecida como <b>sinapse</b>. Logo abaixo você encontrará um menu para explorar nossos vídeos informativos e a foto da nossa <b>bio-maquete</b>!</p>
+                <p>Nesse site, abordamos cada parte da principal célula do sistema nervoso, o <b>neurônio</b>, que é formado por: <b>dendritos</b>, <b>corpo celular</b>, <b>axônio</b> e também uma região de comunicação conhecida como <b>sinapse</b>. Logo abaixo você encontrará a nossa <b>bio-maquete</b>, um menu para explorar nossos vídeos informativos e, ao final da página, um questionário sobre o nosso tema!</p>
             </div>
             <div class="img-bx">
                 <img src="./neuronio2.png">
@@ -220,6 +297,8 @@
             <img src="./maquete.jpg">
         </div>
     </div>
+
+    <div class="botaoir"><a href="#tituloquestoes"><h3>Clique para ir direto para o questionário!</h3></a></div>
 
     <figure>
         <figcaption>
@@ -259,6 +338,37 @@
         </div>
         <p>O <b>corpo celular</b>, ou pericário, é a porção do neurônio que contém o núcleo e o citoplasma que envolve o núcleo. Consiste em um centro trófico, mas também tem função receptora e integradora de estímulos, recebendo estímulos excitatórios ou inibitórios produzidos em outras células nervosas.</p>
     </figure>
+
+
+    <div class="questoes">
+        <div class="pergunta">
+            <h1 id="tituloquestoes">Perguntas</h1>
+        </div>
+
+        <p>1- Qual o nome do revestimento que cobre o axônio?</p>
+        <p><input id="errado1" name="opcao1" type="radio" value="errado" onclick="resposta()"> Nódulo de Ranvier</p>
+        <div id="c1"><p><input id="correto1" name="opcao1" type="radio" value="correto" onclick="resposta()"> Bainha de Mielina</p></div>
+        <p><input id="errado2" name="opcao1" type="radio" value="errado" onclick="resposta()"> Oligodendrócitos</p>
+        <br>
+
+        <p>2- Quais as únicas estruturas que todo neurônio têm em comum?</p>
+        <p><input id="errado3" name="opcao2" type="radio" value="errado" onclick="resposta()"> Dendrito e corpo celular</p>
+        <p><input id="errado4" name="opcao2" type="radio" value="errado" onclick="resposta()"> Corpo celular e axônio</p>
+        <div id="c2"><p><input id="correto2" name="opcao2" type="radio" value="correto" onclick="resposta()"> Dendrito e axônio</p></div>
+        <br>
+
+        <p>3- Qual a função do corpo celular?</p>
+        <div id="c3"><p><input id="correto3" name="opcao3" type="radio" value="correto" onclick="resposta()"> Receber e integrar estímulos nervosos</p></div>
+        <p><input id="errado5" name="opcao3" type="radio" value="errado" onclick="resposta()"> Servir como cabo de transmissão de impulsos nervosos</p>
+        <p><input id="errado6" name="opcao3" type="radio" value="errado" onclick="resposta()"> Receber estímulos do meio ambiente</p>
+        <br>
+
+        <p>4- Qual afirmativa está correta sobre a sinapse?</p>
+        <p><input id="errado7" name="opcao4" type="radio" value="errado" onclick="resposta()"> As transmissões sinápticas só ocorrem entre um neurônio e outro</p>
+        <div id="c4"><p><input id="correto4" name="opcao4" type="radio" value="correto" onclick="resposta()"> Nas sinapses, os neurotransmissores se movem através do espaço em direção às células vizinhas</p></div>
+        <p><input id="errado8" name="opcao4" type="radio" value="errado" onclick="resposta()"> A sinapse é uma região onde há contato direto de uma membrana com a outra</p>
+    </div>
+
 
     <div class="voltaraotopo">
         <a href="#topo"><h3>Voltar ao topo</h3></a>
